@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>TV Shows Finder</title>
+  </head>
+  <body class="bg-gray-100">
+    <section id="header" class="font-bold text-3xl text-center">
+      <h1>TV Shows Finder</h1>
+    </section>
+    <section class="p-5">
+      <div class="flex flex-col items-center">
+        <h2 class="font-medium">Find your TV Show</h2>
+        <form id="searchForm">
+          <input
+            class="border px-2"
+            type="text"
+            placeholder="Tv show title"
+            name="query"
+          />
+          <button class="border px-2">Find</button>
+        </form>
+      </div>
+      <div class="flex justify-center">
+        <div id="showCard" class="hidden flex flex-col items-center w-5xl">
+          <img id="showImg" class="pt-5" src="" alt="" />
+
+          <div class="flex flex-col">
+            <h2 id="showTitle" class="font-bold pt-4"></h2>
+            <span id="showLang"></span>
+            <span id="showDuration"></span>
+            <span id="showRating"></span>
+            <span id="showPremiered"></span>
+            <span id="showSummary"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
